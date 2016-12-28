@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+    
+    var district = new Array();
+    district[0] = [];    
+    district[1] = ["大同區","大安區","中山區","中正區","信義區"];
+    district[2] = ["淡水區","三重區","新莊區","樹林區"];
+    district[3] = ["觀音區","大園區","楊梅區"];
+    function update(index){
+        for(var i = 0; i<district[index].length;i++){
+        myForm.district.options[i] = new Option(district[index][i],district[index][i]);
+            
+        }
+        
+        myForm.district.length=district[index].length;
+    }    
+    
+        
+    </script>
+    
+    
+    
+</head>
+<body>
+    <form action = "" id="myForm">
+      <select name="city"id="city" onchange="update(this.selectedIndex)">
+          <option value="">請選擇</option>
+          <option value="台北市">台北市</option>
+          <option value="新北市">新北市</option>
+          <option value="桃園市">桃園市</option>
+      </select>
+        <select name="district"id="district">
+           <option value=""></option>
+        
+      </select>      
+    </form>
+    
+    
+</body>
+</html>
